@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#09090f" />
-    <meta name="description" content="Protótipo navegável da Underground" />
+    <meta name="description" content="Underground — conta, perfil e demonstração do MVP" />
     <title>Underground — experiências que conectam</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
   </head>
   <body>
     <a class="skip-link" href="#content">Pular para o conteúdo</a>
@@ -16,18 +17,19 @@
           <span class="brand-mark" aria-hidden="true">U</span><span>UNDERGROUND</span>
         </a>
         <nav id="primary-nav"></nav>
-        <div class="trust-note"><span aria-hidden="true">✦</span><p><strong>Protótipo seguro</strong><br />Nenhuma operação é real.</p></div>
+        <div class="trust-note"><span aria-hidden="true">✦</span><p><strong data-i18n="trustTitle">Sua conta é real</strong><br /><span data-i18n="trustBody">Descoberta, convites e pagamentos ainda são demonstrações.</span></p></div>
       </aside>
       <div class="workspace">
         <header class="topbar">
-          <div><span class="eyebrow" data-i18n="prototype">PROTÓTIPO NAVEGÁVEL</span><p id="route-context">Experiências que conectam</p></div>
-          <div class="user-chip"><span class="avatar small">MC</span><span><strong>Marina</strong><small data-i18n="client">Cliente verificada</small></span></div>
+          <div><span class="eyebrow" data-i18n="appLabel">CONTA E PERFIL</span><p id="route-context">Experiências que conectam</p></div>
+          <div id="user-chip" class="user-chip"><a href="#login">Entrar</a></div>
         </header>
         <main id="content" tabindex="-1"></main>
         <footer><span>Underground · MVP 0.1</span><label for="locale" data-i18n="language">Idioma</label><select id="locale"><option value="pt-BR">Português (Brasil)</option><option value="pt-PT">Português (Portugal)</option></select></footer>
       </div>
     </div>
     <div id="announcer" class="sr-only" aria-live="polite"></div>
+    <script src="account.js" defer></script>
     <script src="app.js" defer></script>
   </body>
 </html>

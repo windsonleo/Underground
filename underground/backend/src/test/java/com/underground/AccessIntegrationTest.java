@@ -129,6 +129,17 @@ class AccessIntegrationTest {
         mvc.perform(post("/api/auth/logout").session(authenticated)
             .header(newToken.get("headerName").asText(), newToken.get("token").asText())).andExpect(status().isNoContent());
     }
+    @Test void frontendIsPublicButPrivateApiRemainsProtected() throws Exception {
+        mvc.perform(get("/")).andExpect(status().isOk());
+        mvc.perform(get("/index.html")).andExpect(status().isOk());
+        for (String asset : List.of("app.js", "account.js", "styles.css", "account.css")) {
+            mvc.perform(get("/" + asset)).andExpect(status().isOk());
+        }
+        mvc.perform(get("/api/profiles/me")).andExpect(status().isUnauthorized());
+        mvc.perform(get("/application.yml")).andExpect(status().isUnauthorized());
+        mvc.perform(get("/tests/test_prototype.py")).andExpect(status().isUnauthorized());
+    }
+
     @Test void csrfAndOpenApiAvailable() throws Exception {
         mvc.perform(get("/api/auth/csrf")).andExpect(status().isOk()).andExpect(jsonPath("token").isNotEmpty());
         mvc.perform(get("/v3/api-docs")).andExpect(status().isOk()).andExpect(jsonPath("paths['/api/auth/register']").exists());

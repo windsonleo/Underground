@@ -1,0 +1,10 @@
+.account-page{max-width:800px}.account-page .page-title{font-size:clamp(2rem,5vw,3.5rem)}
+.account-form{margin:20px 0}.account-form fieldset{border:0;padding:0;margin:0;display:grid;gap:12px;min-width:0}
+.account-form label{font-weight:600}.account-form input:not([type=checkbox]),.account-form textarea,.account-form select{width:100%;box-sizing:border-box;border:1px solid #69627d;border-radius:10px;background:var(--bg);color:var(--text);padding:12px;font:inherit}
+.account-form input:focus-visible,.account-form textarea:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.account-form .checkbox-field{display:flex;gap:10px;align-items:start;margin:8px 0}.checkbox-field input{width:20px;height:20px;flex-shrink:0}
+.field-help{font-size:.9rem;line-height:1.5;color:var(--muted);margin:0 0 8px}
+.account-form .btn{margin-top:8px}.account-form:has(fieldset:disabled){opacity:.7}
+.form-feedback{min-height:1.5em;color:var(--success)}.form-feedback.error{color:#ffb1c0}
+.account-page a,.user-chip a{color:#ff9fc2}.account-summary{overflow-wrap:anywhere}.user-chip{max-width:45%;overflow-wrap:anywhere}
+.demo-banner{margin:20px clamp(20px,5vw,72px) 0}.trust-note{margin-top:24px}
