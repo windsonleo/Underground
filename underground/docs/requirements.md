@@ -22,4 +22,4 @@ O fluxo aprovado é: cadastro e verificação; descoberta determinística; convi
 
 ## Entrega atual
 
-Esta entrega cobre a etapa 1: protótipo navegável com dados fictícios. Não há backend funcional, fornecedor externo ou operação financeira. Os demais critérios permanecem requisitos para entregas futuras.
+A entrega inclui o protótipo com dados fictícios e a primeira etapa do backend: cadastro, autenticação e perfis. O frontend ainda não consome a API. Verificação externa, matching e operações transacionais permanecem para entregas futuras.

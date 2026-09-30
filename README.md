@@ -15,7 +15,7 @@ Abra <http://localhost:4173>. O protótipo usa apenas dados fictícios e não ex
 
 - `underground/frontend/`: protótipo web responsivo e acessível, sem dependências de execução.
 - `underground/docs/`: requisitos, arquitetura e decisões do produto.
-- `underground/backend/`: fronteiras planejadas do monólito modular (implementação futura).
+- `underground/backend/`: API Java 21: identidade, autenticação e perfis (consulte o README do backend).
 - `underground/AI_MANIFEST.md`: índice de decisões e estado verificável da entrega.
 
 ## Validação rápida

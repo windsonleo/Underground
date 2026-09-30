@@ -20,6 +20,6 @@ Monólito modular com uma API e um banco MySQL. Controladores autenticam e valid
 
 Cada módulo futuro deve conter apenas camadas com responsabilidade real (`api`, `application`, `domain`, `infrastructure`). A confirmação de encontro e o consumo da reserva compartilham uma transação. Eventos externos são gravados na outbox na mesma transação.
 
-## Tecnologia proposta, não aprovada como regra comercial
+## Tecnologia
 
-Java 21 com Spring Boot e MySQL no backend; React com TypeScript para evolução da interface web. As versões devem ser verificadas quando a implementação dependente começar. Este protótipo estático evita fixar dependências sem validação.
+Backend implementado com Java 21, Spring Boot 3.5.16, Maven, MySQL, Flyway e Spring Security; H2 somente nos testes. Os módulos identity, profiles e shared possuem responsabilidades reais, sem camadas vazias. React com TypeScript permanece proposto para evolução da interface web. Consulte backend/README.md para contratos, execução e limites.

@@ -20,3 +20,11 @@ Nenhuma opção visual no protótipo resolve esses tópicos. Rótulos como “12
 ## Divergências
 
 Nenhuma registrada nesta entrega.
+
+## Implementação técnica da primeira entrega
+
+- Aprovado pelo pedido desta entrega: Java 21, Maven, Spring Boot, MySQL em execução normal, H2 apenas em testes, Flyway, Spring Security e OpenAPI.
+- Implementado: sessão de servidor com CSRF, cadastro CLIENT/HOST e estado inicial PENDING. ADMIN existe no modelo, sem criação pública nem acesso irrestrito.
+- Implementado: declaração de maioridade obrigatória; ela não substitui verificação de identidade. Não há API que aprove identidade.
+- Proposto para evolução: fluxo operacional de verificação, provisionamento administrativo auditado e controles de tentativas. Sem fornecedor ou política comercial presumidos.
+- Escolha técnica desta entrega: perfis públicos acessíveis apenas entre contas verificadas; pendentes editam somente seu próprio perfil. Campos públicos: identificador, nome de exibição e bio.
